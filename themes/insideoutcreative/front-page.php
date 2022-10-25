@@ -31,7 +31,7 @@ $icon = get_sub_field('icon');
 $iconsCounter++;
 
 if($iconsCounter == 1) {
-echo '<div class="col-lg-3 text-center col-intro-icon" style="margin-top:-50px;">';
+echo '<div class="col-md-3 text-center col-intro-icon" style="margin-top:-50px;">';
 echo '<div class="position-relative d-inline-block p-2 tab-icon tab-icon-active" style="border-radius:50%;border:1px solid white;" id="tab-icon-' . $iconsCounter . '">';
 echo '<div class="position-relative bg-accent d-inline-block p-2" style="border-radius:50%;">';
 echo wp_get_attachment_image($icon['id'], 'full','',['class'=>'w-auto img-portfolio','style'=>'height:75px;width:75px;object-fit:contain;'] );
@@ -40,7 +40,7 @@ echo '</div>';
 echo '<span class="p-2 text-accent-tertiary d-block aspira-bold" style="text-shadow:1px 1px white;">' . $icon['title'] . '</span>';
 echo '</div>';
 } else {
-echo '<div class="col-lg-3 text-center col-intro-icon" style="margin-top:-50px;">';
+echo '<div class="col-md-3 text-center col-intro-icon" style="margin-top:-50px;">';
 echo '<div class="position-relative d-inline-block p-2 tab-icon" style="border-radius:50%;border:1px solid white;" id="tab-icon-' . $iconsCounter . '">';
 echo '<div class="position-relative bg-accent d-inline-block p-2" style="border-radius:50%;">';
 echo wp_get_attachment_image($icon['id'], 'full','',['class'=>'w-auto img-portfolio','style'=>'height:75px;width:75px;object-fit:contain;'] );
@@ -440,7 +440,7 @@ echo '<div class="position-absolute w-100 bg-accent-quaternary" style="top:50%;l
 echo '<div class="container">';
 echo '<div class="row justify-content-center">';
 echo '<div class="col-md-9 text-center text-white">';
-echo '<div class="position-relative pt-5 pr-md-5 pl-md-5" style="background:#c2c2c2;border:4px solid white;box-shadow:inset 0px 0px 5px rgba(0,0,0,.5);">';
+echo '<div class="position-relative pt-5 pr-md-5 pl-md-5 pl-3 pr-4" style="background:#c2c2c2;border:4px solid white;box-shadow:inset 0px 0px 5px rgba(0,0,0,.5);">';
 echo get_sub_field('content_bottom');
 echo '</div>';
 echo '</div>';

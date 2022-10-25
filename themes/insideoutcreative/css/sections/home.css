@@ -109,7 +109,7 @@
   position: relative !important;
 }
 
-@media only screen and (max-width:991px) {
+@media only screen and (max-width:767px) {
 
   .col-intro-icon:nth-child(2),
   .col-intro-icon:nth-child(3) {
@@ -128,15 +128,16 @@
   transform: scale(1.05);
 }
 
-@media only screen and (min-width:992px) {
-  .col-second-gallery a:last-child {
-    margin-top: 24px;
-  }
+/* @media only screen and (min-width:992px) { */
+.col-second-gallery a:last-child {
+  margin-top: 24px;
 }
+
+/* } */
 
 @media only screen and (min-width:768px) and (max-width:991px) {
   .col-second-gallery {
-    height: 230px !important;
+    height: 213px !important;
   }
 }
 

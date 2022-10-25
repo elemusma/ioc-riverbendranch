@@ -14,7 +14,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 </a>
 </div>
 <?php 
-echo '<div class="col-12 pb-5">';
+echo '<div class="col-12">';
 wp_nav_menu(array(
 'menu' => 'footer',
 'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center text-white'
@@ -22,10 +22,15 @@ wp_nav_menu(array(
 echo '</div>';
 echo '</div>';
 
-echo '<div class="row justify-content-end align-items-center">';
+echo '<div class="row justify-content-end align-items-center pt-5">';
+
+echo '<div class="col-lg-3 text-center">';
+echo get_template_part('partials/si');
+echo '</div>';
+
 echo '<div class="col-lg-6 text-white">';
-echo get_template_part('partials/si'); 
-echo '<div style="" class="pt-5">';
+
+echo '<div style="" class="">';
 the_field('footer_message','options');
 
 echo '<div class="d-flex justify-content-center align-items-center flex-wrap">';
@@ -45,9 +50,9 @@ echo '</div>';
 echo '</div>';
 
 
-echo '<div class="col-lg-3 text-center pt-5">';
+echo '<div class="col-lg-3 text-center pt-md-0 pt-5">';
 
-echo '<p class="text-white mb-0"><small>Created by</small></p>';
+// echo '<p class="text-white mb-0"><small>Created by</small></p>';
 echo '<a href="https://insideoutcreative.io/" target="_blank" title="Website Development, Design &amp SEO in Colorado and Florida" style="padding-top:35px;"><img class="auto img-backlink" src="https://insideoutcreative.io/wp-content/uploads/2022/04/created-by-inside-out-creative.png" alt="Website Development, Design &amp SEO in Colorado - Florida" width="125px" /></a>';
 
 echo '</div>';

@@ -75,7 +75,7 @@ echo '<section class="hero position-relative z-2">';
 if($logo){
     echo '<div class="text-center pt-5">';
     echo '<a href="' . home_url() . '">';
-    echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:500px;']);
+    echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto pl-md-0 pl-4 pr-md-0 pr-4','style'=>'max-width:500px;']);
     echo '</a>';
     echo '</div>';
 }
@@ -86,7 +86,7 @@ echo '<div class="container">';
 echo '<div class="row justify-content-center">';
 
 echo '<div class="col-lg-9 text-center">';
-echo '<h1 class="aspira-black" style="font-size:40px;line-height:1;text-shadow:1px 1px 3px black;">' . get_the_title() . '</h1>';
+echo '<h1 class="" style="font-size:40px;line-height:1;text-shadow:1px 1px 3px black;">' . get_the_title() . '</h1>';
 
 echo '</div>';
 echo '</div>';

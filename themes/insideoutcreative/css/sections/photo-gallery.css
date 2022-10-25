@@ -11,7 +11,7 @@ button.owl-prev {
     outline: none !important;
 }
 
-@media screen and (min-width:992px) {
+@media only screen and (min-width:992px) {
 
     button.owl-next,
     button.owl-prev {
@@ -27,6 +27,12 @@ button.owl-prev {
     button.owl-next {
         right: -5%;
         transform: translate(0, 50%);
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .owl-nav {
+        transform: translate(0px, -60px);
     }
 }
 

@@ -32,7 +32,7 @@ em,
 h1,
 .h1 {
   font-family: bodoni-urw, serif;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .proxima-bold {
@@ -41,10 +41,6 @@ h1,
 
 .text-accent-blue-light {
   color: var(--blue-light);
-}
-
-.text-accent {
-  color: var(--accent-secondary);
 }
 
 .aspira-black {
