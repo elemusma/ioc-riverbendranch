@@ -56,16 +56,17 @@ ul.menu>li>a {
 
 
 
-@media screen and (min-width: 1200px) {
-  ul.menu li a {
-    border-left: 1px solid var(--accent-secondary);
-  }
-
-  ul.menu li:first-child a {
-    border: none;
-    padding-left: 0;
-  }
+/* @media screen and (min-width: 1200px) { */
+ul.menu li a {
+  border-left: 1px solid var(--accent-secondary);
 }
+
+ul.menu li:first-child a {
+  border: none;
+  padding-left: 0;
+}
+
+/* } */
 
 @media screen and (max-width: 1199px) {
   .nav ul.menu {

@@ -13,7 +13,7 @@ let blankSpace = document.querySelector('.blank-space');
 window.addEventListener("scroll", parallaxEffect);
 
 function parallaxEffect() {
-    blankSpace.style.height = secondaryNav.offsetHeight + "px";
+    blankSpace.style.height = (secondaryNav.offsetHeight - 3) + "px";
     secondaryNav.classList.add('position-fixed');
     secondaryNav.classList.remove('position-relative');
 

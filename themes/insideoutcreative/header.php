@@ -21,25 +21,25 @@ echo '<div class="secondary-nav text-white position-relative w-100 bg-accent" st
 echo '<div class="container z-3 position-relative">';
 echo '<div class="row align-items-center justify-content-center">';
 
-echo '<div class="col-6 desktop-hidden">';
-echo '<a id="navToggle" class="nav-toggle">';
-echo '<div>';
-echo '<div class="line-1 bg-white"></div>';
-echo '<div class="line-2 bg-white"></div>';
-echo '<div class="line-3 bg-white"></div>';
-echo '</div>';
-echo '</a>';
-echo '</div>';
+// echo '<div class="col-6 desktop-hidden">';
+// echo '<a id="navToggle" class="nav-toggle">';
+// echo '<div>';
+// echo '<div class="line-1 bg-white"></div>';
+// echo '<div class="line-2 bg-white"></div>';
+// echo '<div class="line-3 bg-white"></div>';
+// echo '</div>';
+// echo '</a>';
+// echo '</div>';
 
 
-echo '<div class="col-4 text-center d-flex align-items-center justify-content-center">';
+echo '<div class="col-lg-4 text-center d-flex align-items-center justify-content-center">';
 
-echo '<div class="mobile-hidden">';
+// echo '<div class="mobile-hidden">';
 wp_nav_menu(array(
     'menu' => 'primary',
     'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center mb-0'
 ));
-echo '</div>';
+// echo '</div>';
 
 echo '</div>';
 
