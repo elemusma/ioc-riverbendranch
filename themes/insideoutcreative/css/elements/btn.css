@@ -1,0 +1,26 @@
+/* .btn.btn-main {
+    background: rgba(222, 210, 167, .54);
+    color: white;
+    font-weight: 900;
+    border-radius: 0;
+    border: 4px solid #8b8c94;
+    padding: 10px 45px;
+    transition: all .25s ease-in-out;
+}
+
+.btn.btn-main:hover {
+    background: rgba(222, 210, 167, 1);
+} */
+
+a.btn-main {
+    background: var(--accent-secondary);
+    padding: 15px 25px;
+    transition: all .25s ease-in-out;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.btn-main:hover {
+    background: var(--accent-primary)
+}

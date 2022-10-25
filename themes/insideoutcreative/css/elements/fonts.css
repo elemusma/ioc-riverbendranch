@@ -1,0 +1,95 @@
+.text-accent {
+  color: var(--accent-primary);
+}
+
+.text-accent-secondary {
+  color: var(--accent-secondary);
+}
+
+.text-accent-tertiary {
+  color: var(--accent-tertiary);
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px black;
+}
+
+/* start of fonts */
+html,
+body,
+a,
+p,
+span,
+strong,
+ul,
+li,
+div,
+em,
+.proxima {
+  font-family: var(--proxima-regular);
+}
+
+h1,
+.h1 {
+  font-family: bodoni-urw, serif;
+  font-weight: 900;
+}
+
+.proxima-bold {
+  font-family: var(--proxima-bold);
+}
+
+.text-accent-blue-light {
+  color: var(--blue-light);
+}
+
+.text-accent {
+  color: var(--accent-secondary);
+}
+
+.aspira-black {
+  font-family: var(--aspira-black);
+}
+
+.aspira-bold {
+  font-family: var(--aspira-bold);
+}
+
+.liana {
+  font-family: liana, script;
+}
+
+
+
+/* end of fonts */
+/* Liana Regular
+font-family: liana, script;
+font-weight: 400;
+font-style: normal; 
+
+Eurostile Extd Black
+font-family: eurostile-extended, sans-serif;
+font-weight: 900;
+font-style: normal;
+
+
+Bodoni URW Regular
+font-family: bodoni-urw, serif;
+font-weight: 400;
+font-style: normal;
+
+Bodoni URW Bold
+font-family: bodoni-urw, serif;
+font-weight: 700;
+font-style: normal;
+
+Bodoni URW Regular Oblique
+font-family: bodoni-urw, serif;
+font-weight: 400;
+font-style: italic;
+
+Bodoni URW Bold Oblique
+font-family: bodoni-urw, serif;
+font-weight: 700;
+font-style: italic; 
+*/

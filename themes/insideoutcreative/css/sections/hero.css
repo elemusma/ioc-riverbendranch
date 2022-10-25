@@ -1,0 +1,33 @@
+.img-hero {
+    min-height: 300px;
+    height: 85vh;
+    object-fit: cover;
+}
+
+body:not(.home) .img-hero {
+    min-height: 200px;
+    height: 30vh;
+}
+
+.triangle {
+    background: var(--accent-secondary);
+    -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    height: 300px;
+    z-index: 1;
+    right: 0;
+    top: 0px;
+    width: 550px;
+    width: 60vw;
+}
+
+.triangle.triangle-border {
+    background: var(--blue-light);
+    right: 2px;
+}
+
+@media only screen and (max-width:767px) {
+    .triangle {
+        width: 100vw;
+    }
+}

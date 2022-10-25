@@ -1,0 +1,42 @@
+/* :root {
+    --accent-primary: #ef8e25;
+    --accent-secondary: #231f20;
+} */
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #eaeaea;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .5);
+    padding: 9px 25px;
+    outline-color: var(--accent);
+    margin-bottom: 9px !important;
+}
+
+label {
+    font-weight: 700;
+    font-size: 90%;
+    margin-top: 15px;
+}
+
+input#gform_submit_button_1 {
+    color: white;
+    width: auto;
+    padding: 10px 35px;
+    border-radius: 25px;
+    border: none;
+    transition: all .25s ease-in-out;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--accent-secondary);
+    box-shadow: none;
+}
+
+input#gform_submit_button_1:hover {
+    background: var(--accent-quinary);
+}
+
+.gform_footer.top_label {
+    padding-bottom: 0 !important;
+    margin-bottom: -30px !important;
+}
