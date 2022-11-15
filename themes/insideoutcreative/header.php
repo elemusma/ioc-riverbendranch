@@ -15,10 +15,16 @@
 <?php
 if(get_field('body','options')) { the_field('body','options'); }
 
-echo '<div class="secondary-nav text-white position-relative w-100 bg-accent" style="top:0;z-index:12;">';
+echo '<div class="secondary-nav position-relative w-100 bg-accent" style="top:0;z-index:12;">';
+
+if(get_field('website_message','options')):
+    echo '<div class="bg-light text-center">';
+    echo '<span class="mt-3 d-inline-block">' . get_field('website_message','options') . '</span>';
+    echo '</div>';
+endif;
 
 
-echo '<div class="container z-3 position-relative">';
+echo '<div class="container z-3 position-relative text-white">';
 echo '<div class="row align-items-center justify-content-center">';
 
 // echo '<div class="col-6 desktop-hidden">';

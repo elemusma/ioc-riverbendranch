@@ -439,7 +439,7 @@ echo '<section class="pt-5 pb-5 position-relative z-1" style="">';
 echo '<div class="position-absolute w-100 bg-accent-quaternary" style="top:50%;left:0;height:70%;transform:translate(0,-50%);"></div>';
 echo '<div class="container">';
 echo '<div class="row justify-content-center">';
-echo '<div class="col-md-9 text-center text-white">';
+echo '<div class="col-md-9 text-center">';
 echo '<div class="position-relative pt-5 pr-md-5 pl-md-5 pl-3 pr-4" style="background:#c2c2c2;border:4px solid white;box-shadow:inset 0px 0px 5px rgba(0,0,0,.5);">';
 echo get_sub_field('content_bottom');
 echo '</div>';
