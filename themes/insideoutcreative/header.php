@@ -19,13 +19,13 @@ echo '<div class="secondary-nav position-relative w-100 bg-accent" style="top:0;
 
 if(get_field('website_message','options')):
     echo '<div class="bg-light text-center">';
-    echo '<span class="mt-3 d-inline-block">' . get_field('website_message','options') . '</span>';
+    echo '<span class="d-inline-block p-2" style="margin-bottom:-1rem;">' . get_field('website_message','options') . '</span>';
     echo '</div>';
 endif;
 
 
 echo '<div class="container z-3 position-relative text-white">';
-echo '<div class="row align-items-center justify-content-center">';
+echo '<div class="row align-items-center justify-content-end">';
 
 // echo '<div class="col-6 desktop-hidden">';
 // echo '<a id="navToggle" class="nav-toggle">';
@@ -38,7 +38,7 @@ echo '<div class="row align-items-center justify-content-center">';
 // echo '</div>';
 
 
-echo '<div class="col-lg-4 text-center d-flex align-items-center justify-content-center">';
+echo '<div class="col-lg-6 text-center d-flex align-items-center justify-content-center">';
 
 // echo '<div class="mobile-hidden">';
 wp_nav_menu(array(
@@ -47,6 +47,10 @@ wp_nav_menu(array(
 ));
 // echo '</div>';
 
+echo '</div>';
+
+echo '<div class="col-lg-3 text-right">';
+echo '<a href="tel:+1' . get_field('phone','options') . '" class="h2 text-white">' . get_field('phone','options') . '</a>';
 echo '</div>';
 
 echo '</div>';

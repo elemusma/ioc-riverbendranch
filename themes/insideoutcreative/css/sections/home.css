@@ -185,6 +185,9 @@
   border-right: 1px solid white;
 }
 
+.col-full-background:first-child .img-full-background {
+  left: 0;
+}
 
 /* start of bars mobile */
 @media only screen and (max-width:992px) {

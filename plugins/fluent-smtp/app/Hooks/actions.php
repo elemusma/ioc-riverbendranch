@@ -1,8 +1,13 @@
 <?php
+/*
+ * @var $app FluentMail\Includes\Core\Application
+ */
 
 (new \FluentMail\App\Hooks\Handlers\AdminMenuHandler($app))->addFluentMailMenu();
 
 (new \FluentMail\App\Hooks\Handlers\SchedulerHandler())->register();
+
+(new \FluentMail\App\Hooks\Handlers\InitializeSiteHandler())->addHandler();
 
 $app->addCustomAction('handle_exception', 'ExceptionHandler@handle');
 

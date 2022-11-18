@@ -1,12 +1,14 @@
 .si svg {
-    height:30px;
-    width:auto;
-    fill:white;
-    transition:all .25s ease-in-out;
+    height: 30px;
+    width: auto;
+    fill: white;
+    transition: all .25s ease-in-out;
 }
+
 .si-icon-link:hover svg {
-    fill:#ff5223;
+    fill: var(--accent-secondary);
 }
+
 /* .svg-icon {
     border:1px solid white;
     height:40px;
