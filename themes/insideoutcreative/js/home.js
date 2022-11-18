@@ -12,13 +12,12 @@ for (i = 0; i < introIcons.length; i++) {
 
 let showIconsContent = (elem) => {
 
-    console.log(elem);
+    // console.log(elem);
     let ID = elem.id;
-    console.log(ID);
+    // console.log(ID);
 
     // needs to be before command adding class
     elemActive = document.querySelector('.tab-icon-active');
-    tabContentActive = document.querySelector('.tab-content-active');
 
     // makes clicked element active
     if (!elem.classList.contains('tab-icon-active')) {
@@ -28,9 +27,24 @@ let showIconsContent = (elem) => {
     // makes all other elements inactive
     elemActive.classList.remove('tab-icon-active');
 
+    // bgImg element
+    bgImgActive = document.querySelector('.tab-bg-img-active');
+    let bgImg = ID.replace("icon", "bg-img");
+    let bgImgID = document.querySelector('#' + bgImg)
+    // console.log(bgImgID)
+
+    // makes bgImg element active
+    if (!bgImgID.classList.contains('tab-bg-img-active')) {
+        bgImgID.classList.add('tab-bg-img-active');
+    }
+
+    // makes all other bgImg elements inactive
+    bgImgActive.classList.remove('tab-bg-img-active');
+
+    tabContentActive = document.querySelector('.tab-content-active');
     let tabContent = ID.replace("icon", "content");
     let tabContentID = document.querySelector('#' + tabContent);
-    console.log(tabContentID);
+    // console.log(tabContentID);
 
     // makes clicked element active
     if (!tabContentID.classList.contains('tab-content-active')) {

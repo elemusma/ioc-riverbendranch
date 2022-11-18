@@ -57,6 +57,15 @@
   clip-path: polygon(0% 17%, 100% 0%, 100% 100%, 0% 82%);
 }
 
+.bg-img-icons {
+  opacity: 0;
+  transition: all .25s ease-in-out;
+}
+
+.bg-img-icons.tab-bg-img-active {
+  opacity: 1;
+}
+
 /* start of header */
 @media screen and (max-width: 767px) {
 

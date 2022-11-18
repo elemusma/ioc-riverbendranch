@@ -10,17 +10,36 @@ echo '<div class="position-relative" style="">';
 if(have_rows('intro_content')): while(have_rows('intro_content')): the_row();
 $bgImg = get_sub_field('background_image');
 $icons = get_sub_field('icons');
-$pretitle = get_sub_field('pretitle');
-$title = get_sub_field('title');
-$subtitle = get_sub_field('subtitle');
-$content = get_sub_field('content');
-$button = get_sub_field('button');
-$button_url = $button['url'];
-$button_title = $button['title'];
-$button_target = $button['target'] ? $button['target'] : '_self';
+// $pretitle = get_sub_field('pretitle');
+// $title = get_sub_field('title');
+// $subtitle = get_sub_field('subtitle');
+// $content = get_sub_field('content');
+// $button = get_sub_field('button');
+// $button_url = $button['url'];
+// $button_title = $button['title'];
+// $button_target = $button['target'] ? $button['target'] : '_self';
 
 
-echo '<section class="position-relative z-3 bg-attachment pb-5" style="background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;">';
+echo '<section class="position-relative z-3 pb-5" style="">';
+
+// echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100 position-absolute','style'=>'top:0;left:0;object-fit:cover;']);
+
+if( have_rows('icons')):
+    $iconsCounterImages = 0;
+    while(have_rows('icons')): the_row();
+    $iconsCounterImages++;
+    $bgImgIcons = get_sub_field('background_image');
+
+    if($iconsCounterImages == 1){
+        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons tab-bg-img-active','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+    } else {
+        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+    }
+
+    endwhile;
+endif;
+
+echo '<div class="position-absolute w-100 h-100 bg-black" style="opacity:.5;top:0;left:0;"></div>';
 
 echo '<div class="container">';
 
@@ -59,7 +78,7 @@ endif;
 
 if( have_rows('icons')):
 echo '<div class="row justify-content-center pt-5">';
-echo '<div class="col-lg-6 text-center col-tab-content">';
+echo '<div class="col-lg-6 text-center col-tab-content text-white">';
 $iconsCounter = 0;
 while(have_rows('icons')): the_row();
 $pretitle = get_sub_field('pretitle');
@@ -71,9 +90,9 @@ $iconsCounter++;
 
 if($iconsCounter == 1){
 echo '<div class="w-100 tab-content tab-content-active" id="tab-content-' . $iconsCounter . '">';
-echo '<h2 class="text-accent-tertiary proxima-bold">' . $title . '</h2>';
+echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
-echo '<div class="text-accent-tertiary pt-4 pb-5" style="font-size:125%;">';
+echo '<div class="pt-4 pb-5" style="font-size:125%;">';
 echo $content;
 echo '</div>';
 
@@ -88,9 +107,9 @@ echo '</div>';
 
 } else {
 echo '<div class="w-100 tab-content" style="" id="tab-content-' . $iconsCounter . '">';
-echo '<h2 class="text-accent-tertiary proxima-bold">' . $title . '</h2>';
+echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
-echo '<div class="text-accent-tertiary pt-4 pb-5" style="font-size:125%;">';
+echo '<div class="pt-4 pb-5" style="font-size:125%;">';
 echo $content;
 echo '</div>';
 
