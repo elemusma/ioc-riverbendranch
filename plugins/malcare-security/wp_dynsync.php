@@ -267,7 +267,7 @@ class BVWPDynSync {
 		}
 	}
 
-	function woocommerce_update_order_handler($order_id, $order) {
+	function woocommerce_update_order_handler($order_id, $order = null) {
 		$this->add_db_event('wc_orders', array('id' => $order_id));
 		$this->add_db_event('wc_orders_meta', array('order_id' => $order_id));
 		$this->add_db_event('wc_order_addresses', array('order_id' => $order_id));

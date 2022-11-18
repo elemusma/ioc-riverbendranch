@@ -15,7 +15,8 @@ section.hero {
 <?php if(has_post_thumbnail()){
     the_post_thumbnail('full',array('class'=>'bg-img position-absolute w-100 h-100'));
 } else { 
-echo wp_get_attachment_image(26,'full','',['class'=>'bg-img position-absolute w-100 h-100']); 
+$globalPlaceholderImg = get_field('global_placeholder_image','options');
+echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'bg-img position-absolute w-100 h-100']);
 } ?>
     <div class="container pb-4">
         <div class="row justify-content-center">

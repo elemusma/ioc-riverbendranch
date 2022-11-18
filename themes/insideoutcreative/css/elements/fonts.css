@@ -1,5 +1,10 @@
-.text-accent {
+.text-accent,
+.text-accent * {
   color: var(--accent-primary);
+}
+
+a:hover {
+  color: var(--accent-secondary);
 }
 
 .text-accent-secondary {
@@ -35,7 +40,8 @@ h1,
   font-weight: 400;
 }
 
-.proxima-bold {
+.proxima-bold,
+strong {
   font-family: var(--proxima-bold);
 }
 
