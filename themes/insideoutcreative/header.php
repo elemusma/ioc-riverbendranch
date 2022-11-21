@@ -80,6 +80,7 @@ echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-
 
 $logo = get_field('logo','options');
 
+if(is_front_page()):
 echo '<section class="hero position-relative z-2">';
 
 if($logo){
@@ -103,8 +104,8 @@ echo '</div>';
 echo '</div>';
 }
 
-
 echo '</section>';
+endif;
 
 echo '</header>';
 

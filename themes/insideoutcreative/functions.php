@@ -15,7 +15,7 @@ if(is_front_page()){
 }
 if(is_page_template('templates/about.php') ){
 	wp_enqueue_style('about-custom', get_theme_file_uri('/css/sections/about.css'));
-	wp_enqueue_style('intro', get_theme_file_uri('/css/sections/intro.css'));
+	// wp_enqueue_style('intro', get_theme_file_uri('/css/sections/intro.css'));
 }
 if( is_page_template('templates/content-page.php' ) ){
 	wp_enqueue_style('content-page', get_theme_file_uri('/css/sections/content-page.css'));
@@ -73,6 +73,9 @@ function riverbendranch_stylesheets_footer() {
 	wp_enqueue_script('nav-js', get_theme_file_uri('/js/nav.js'));
 	wp_enqueue_script('popup-js', get_theme_file_uri('/js/popup.js'));
 	
+	if(is_page_template('templates/about.php')){
+		wp_enqueue_script('about-js-custom', get_theme_file_uri('/js/about.js'));
+	}
 	if(is_single()){
 		wp_enqueue_script('blog-js', get_theme_file_uri('/js/blog.js'));
 	}
