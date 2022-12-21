@@ -44,14 +44,14 @@ echo '<div class="position-absolute w-100 h-100 bg-black" style="opacity:.5;top:
 echo '<div class="container">';
 
 if( have_rows('icons')):
-echo '<div class="row justify-content-center">';
+echo '<div class="row justify-content-center row-intro-icon">';
 $iconsCounter = 0;
 while(have_rows('icons')): the_row();
 $icon = get_sub_field('icon');
 $iconsCounter++;
 
 if($iconsCounter == 1) {
-echo '<div class="col-lg col-md-4 text-center col-intro-icon" style="margin-top:-50px;">';
+echo '<div class="col-lg col-md-4 col-6 text-center col-intro-icon" style="margin-top:-50px;">';
 echo '<div class="position-relative d-inline-block p-2 tab-icon tab-icon-active" style="border-radius:50%;border:1px solid white;" id="tab-icon-' . $iconsCounter . '">';
 echo '<div class="position-relative bg-accent d-inline-block p-2" style="border-radius:50%;">';
 echo wp_get_attachment_image($icon['id'], 'full','',['class'=>'w-auto img-portfolio p-2','style'=>'height:75px;width:75px;object-fit:contain;'] );
@@ -60,7 +60,7 @@ echo '</div>';
 echo '<span class="p-2 text-white d-block aspira-bold" style="text-shadow:1px 1px var(--accent-tertiary);">' . $icon['title'] . '</span>';
 echo '</div>';
 } else {
-echo '<div class="col-lg col-md-4 text-center col-intro-icon" style="margin-top:-50px;">';
+echo '<div class="col-lg col-md-4 col-6 text-center col-intro-icon" style="margin-top:-50px;">';
 echo '<div class="position-relative d-inline-block p-2 tab-icon" style="border-radius:50%;border:1px solid white;" id="tab-icon-' . $iconsCounter . '">';
 echo '<div class="position-relative bg-accent d-inline-block p-2" style="border-radius:50%;">';
 echo wp_get_attachment_image($icon['id'], 'full','',['class'=>'w-auto img-portfolio p-2','style'=>'height:75px;width:75px;object-fit:contain;'] );
