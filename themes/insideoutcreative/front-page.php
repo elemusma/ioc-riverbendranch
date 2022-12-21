@@ -91,12 +91,12 @@ $iconsCounter++;
 
 if($iconsCounter == 1){
 echo '<div class="w-100 tab-content tab-content-active pt-5" id="tab-content-' . $iconsCounter . '">';
-echo '<div class="col-tab-content row justify-content-center">';
+echo '<div class="col-tab-content row justify-content-between">';
 
-echo '<div class="col-lg-6 text-center">';
+echo '<div class="col-lg-5">';
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
-echo '<div class="pt-4 pb-5" style="font-size:125%;">';
+echo '<div class="pt-2 pb-3" style="font-size:125%;">';
 echo $content;
 echo '</div>';
 
@@ -109,7 +109,7 @@ echo '<a class="btn-main" style="" href="' . esc_url( $button_url ) . '" target=
 endwhile; endif;
 echo '</div>';
 
-echo '<div class="col-lg-6 text-center">';
+echo '<div class="col-lg-6">';
 echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
 echo '</div>';
 
@@ -117,13 +117,13 @@ echo '</div>';
 echo '</div>';
 
 } else {
-echo '<div class="w-100 tab-content" style="" id="tab-content-' . $iconsCounter . '">';
-echo '<div class="col-tab-content row justify-content-center">';
-echo '<div class="col-lg-6 text-center">';
+echo '<div class="w-100 tab-content  pt-5" style="" id="tab-content-' . $iconsCounter . '">';
+echo '<div class="col-tab-content row justify-content-between">';
+echo '<div class="col-lg-5">';
 
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
-echo '<div class="pt-4 pb-5" style="font-size:125%;">';
+echo '<div class="pt-2 pb-3" style="font-size:125%;">';
 echo $content;
 echo '</div>';
 
@@ -136,7 +136,7 @@ echo '<a class="btn-main" style="" href="' . esc_url( $button_url ) . '" target=
 endwhile; endif;
 echo '</div>';
 
-echo '<div class="col-lg-6 text-center">';
+echo '<div class="col-lg-6">';
 echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
 echo '</div>';
 

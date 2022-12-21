@@ -69,24 +69,33 @@ echo '</div>';
 
 echo '<div class="blank-space"></div>';
 
-echo '<header class="position-relative w-100" style="top:0;left:0;min-height:80vh;">';
 
-$globalPlaceholderImg = get_field('global_placeholder_image','options');
+// $globalPlaceholderImg = get_field('global_placeholder_image','options');
 
-
-if(is_page()){
-if(has_post_thumbnail()){
-
-echo '<div class="position-absolute w-100 h-100 bg-attachment" style="background:url(' . get_the_post_thumbnail_url() . ');background-size:cover;background-attachment:fixed;background-position:center top;top:0;left:0;"></div>';
-
-} else {
-echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
-}
-} elseif(!is_front_page()) {
-echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
-}
-
+// if(is_page()){
+    // if(has_post_thumbnail()){
+        
+        // echo '<div class="position-absolute w-100 h-100 bg-attachment" style="background:url(' . get_the_post_thumbnail_url() . ');background-size:cover;background-attachment:fixed;background-position:center top;top:0;left:0;"></div>';
+        
+        // } else {
+            // echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
+            // }
+            // } elseif(!is_front_page()) {
+                // echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
+                // }
+                
 if(is_front_page()):
+    echo '<header class="position-relative w-100" style="top:0;left:0;min-height:80vh;">';
+
+    $globalPlaceholderImg = get_field('global_placeholder_image','options');
+    if(has_post_thumbnail()){
+
+        echo '<div class="position-absolute w-100 h-100 bg-attachment" style="background:url(' . get_the_post_thumbnail_url() . ');background-size:cover;background-attachment:fixed;background-position:center top;top:0;left:0;"></div>';
+        
+        } else {
+        echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
+        }
+
 echo '<section class="hero position-relative z-2">';
 
 // if($logo){
@@ -111,9 +120,9 @@ echo '</div>';
 }
 
 echo '</section>';
+echo '</header>';
 endif;
 
-echo '</header>';
 
 
 
