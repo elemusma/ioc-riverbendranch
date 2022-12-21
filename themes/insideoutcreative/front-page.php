@@ -20,7 +20,7 @@ $icons = get_sub_field('icons');
 // $button_target = $button['target'] ? $button['target'] : '_self';
 
 
-echo '<section class="position-relative z-3 pb-5" style="">';
+echo '<section class="position-relative z-3 pb-5 bg-light" style="">';
 
 // echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100 position-absolute','style'=>'top:0;left:0;object-fit:cover;']);
 
@@ -30,16 +30,16 @@ if( have_rows('icons')):
     $iconsCounterImages++;
     $bgImgIcons = get_sub_field('background_image');
 
-    if($iconsCounterImages == 1){
-        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons tab-bg-img-active','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
-    } else {
-        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
-    }
+    // if($iconsCounterImages == 1){
+    //     echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons tab-bg-img-active','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+    // } else {
+    //     echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+    // }
 
     endwhile;
 endif;
 
-echo '<div class="position-absolute w-100 h-100 bg-black" style="opacity:.5;top:0;left:0;"></div>';
+// echo '<div class="position-absolute w-100 h-100 bg-black" style="opacity:.5;top:0;left:0;"></div>';
 
 echo '<div class="container">';
 
@@ -52,21 +52,21 @@ $iconsCounter++;
 
 if($iconsCounter == 1) {
 echo '<div class="col-lg col-md-4 col-6 text-center col-intro-icon" style="margin-top:-50px;">';
-echo '<div class="position-relative d-inline-block p-2 tab-icon tab-icon-active" style="border-radius:50%;border:1px solid white;" id="tab-icon-' . $iconsCounter . '">';
+echo '<div class="position-relative d-inline-block p-2 tab-icon tab-icon-active" style="border-radius:50%;border:1px solid #eaeaea;" id="tab-icon-' . $iconsCounter . '">';
 echo '<div class="position-relative bg-accent d-inline-block p-2" style="border-radius:50%;">';
 echo wp_get_attachment_image($icon['id'], 'full','',['class'=>'w-auto img-portfolio p-2','style'=>'height:75px;width:75px;object-fit:contain;'] );
 echo '</div>';
 echo '</div>';
-echo '<span class="p-2 text-white d-block aspira-bold" style="text-shadow:1px 1px var(--accent-tertiary);">' . $icon['title'] . '</span>';
+echo '<span class="p-2 d-block aspira-bold" style="">' . $icon['title'] . '</span>';
 echo '</div>';
 } else {
 echo '<div class="col-lg col-md-4 col-6 text-center col-intro-icon" style="margin-top:-50px;">';
-echo '<div class="position-relative d-inline-block p-2 tab-icon" style="border-radius:50%;border:1px solid white;" id="tab-icon-' . $iconsCounter . '">';
+echo '<div class="position-relative d-inline-block p-2 tab-icon" style="border-radius:50%;border:1px solid #eaeaea;" id="tab-icon-' . $iconsCounter . '">';
 echo '<div class="position-relative bg-accent d-inline-block p-2" style="border-radius:50%;">';
 echo wp_get_attachment_image($icon['id'], 'full','',['class'=>'w-auto img-portfolio p-2','style'=>'height:75px;width:75px;object-fit:contain;'] );
 echo '</div>';
 echo '</div>';
-echo '<span class="p-2 text-white d-block aspira-bold" style="text-shadow:1px 1px var(--accent-tertiary);">' . $icon['title'] . '</span>';
+echo '<span class="p-2 d-block aspira-bold" style="">' . $icon['title'] . '</span>';
 echo '</div>';
 }
 
@@ -77,19 +77,23 @@ echo '</div>';
 endif;
 
 if( have_rows('icons')):
-echo '<div class="row justify-content-center pt-5">';
-echo '<div class="col-lg-6 text-center col-tab-content text-white">';
+// echo '<div class="row justify-content-center pt-5">';
+// echo '<div class="col-lg-6 text-center col-tab-content text-white">';
 $iconsCounter = 0;
 while(have_rows('icons')): the_row();
 $pretitle = get_sub_field('pretitle');
 $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $content = get_sub_field('content');
+$bgImg = get_sub_field('background_image');
 
 $iconsCounter++;
 
 if($iconsCounter == 1){
-echo '<div class="w-100 tab-content tab-content-active" id="tab-content-' . $iconsCounter . '">';
+echo '<div class="w-100 tab-content tab-content-active pt-5" id="tab-content-' . $iconsCounter . '">';
+echo '<div class="col-tab-content row justify-content-center">';
+
+echo '<div class="col-lg-6 text-center">';
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
 echo '<div class="pt-4 pb-5" style="font-size:125%;">';
@@ -103,10 +107,20 @@ $button_title = $button['title'];
 $button_target = $button['target'] ? $button['target'] : '_self';
 echo '<a class="btn-main" style="" href="' . esc_url( $button_url ) . '" target="' . esc_attr( $button_target ) . '">' . esc_html( $button_title ) . '</a>';
 endwhile; endif;
+echo '</div>';
+
+echo '<div class="col-lg-6 text-center">';
+echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
+echo '</div>';
+
+echo '</div>';
 echo '</div>';
 
 } else {
 echo '<div class="w-100 tab-content" style="" id="tab-content-' . $iconsCounter . '">';
+echo '<div class="col-tab-content row justify-content-center">';
+echo '<div class="col-lg-6 text-center">';
+
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
 echo '<div class="pt-4 pb-5" style="font-size:125%;">';
@@ -120,13 +134,20 @@ $button_title = $button['title'];
 $button_target = $button['target'] ? $button['target'] : '_self';
 echo '<a class="btn-main" style="" href="' . esc_url( $button_url ) . '" target="' . esc_attr( $button_target ) . '">' . esc_html( $button_title ) . '</a>';
 endwhile; endif;
+echo '</div>';
+
+echo '<div class="col-lg-6 text-center">';
+echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
+echo '</div>';
+
+echo '</div>';
 echo '</div>';
 }
 
 
 endwhile;
-echo '</div>';
-echo '</div>';
+// echo '</div>';
+// echo '</div>';
 endif;
 
 
