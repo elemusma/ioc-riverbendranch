@@ -90,7 +90,7 @@ if(is_front_page()):
     $globalPlaceholderImg = get_field('global_placeholder_image','options');
     // if(has_post_thumbnail()){
 
-    echo '<div class="position-absolute w-100 h-100 bg-attachment" style="background:url(' . get_the_post_thumbnail_url() . ');background-size:cover;background-attachment:fixed;background-position:center top;top:0;left:0;" id="imgHeader"></div>';
+    echo '<div class="position-absolute w-100 h-100 bg-attachment" style="background:url(' . get_the_post_thumbnail_url() . ');background-size:cover;background-attachment:fixed;background-position:center top;top:0;left:0;opacity:0;" id="imgHeader"></div>';
         
     //     } else {
     //     echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
