@@ -1,3 +1,12 @@
+// start of header
+headerVideo = document.querySelector('#headerVideo');
+imgHeader = document.querySelector('#imgHeader');
+
+headerVideo.onended = function (e) {
+    headerVideo.style.opacity = "0";
+    imgHeader.style.opacity = "1";
+};
+
 // start of icons
 let introIcons = document.querySelectorAll('.tab-icon');
 
