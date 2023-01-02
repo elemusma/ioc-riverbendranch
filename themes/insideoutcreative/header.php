@@ -97,7 +97,7 @@ if(is_front_page()):
     //     }
     echo '<video playsinline autoplay muted class="w-100 h-100 position-absolute" style="object-fit:cover;pointer-events:none;" src="' . home_url() . '/wp-content/themes/insideoutcreative/videos/River-Bend-Ranch-Web-Banner.mp4" id="headerVideo"></video>';
 
-echo '<section class="hero position-relative z-2">';
+echo '<section class="hero position-relative z-2 sd">';
 
 // if($logo){
 //     echo '<div class="text-center pt-5">';
