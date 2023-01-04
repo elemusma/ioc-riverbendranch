@@ -33,7 +33,7 @@ $('.testimonials-carousel').owlCarousel({
     // autoplay:true,
     // autoplayTimeout:2500,
     // autoplayHoverPause:false,
-    navText: ["<img src='http://localhost:8888/siteworx/wp-content/uploads/2022/10/Arrow-Left.png' />", "<img src='http://localhost:8888/siteworx/wp-content/uploads/2022/10/Arrow-Right.png' />"],
+    navText: ["<img src='https://insideoutcreative.io/wp-content/uploads/2022/11/Arrow-Left.png' />", "<img src='https://insideoutcreative.io/wp-content/uploads/2022/11/Arrow-Right.png' />"],
     responsive: {
         0: {
             items: 1
