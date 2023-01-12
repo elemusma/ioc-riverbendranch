@@ -1,3 +1,7 @@
+.wp-block-image figcaption {
+    display: none !important;
+}
+
 .owl-theme .owl-nav [class*=owl-]:hover {
     background: transparent !important;
 }

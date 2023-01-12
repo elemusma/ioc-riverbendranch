@@ -37,18 +37,18 @@ let showIconsContent = (elem) => {
     elemActive.classList.remove('tab-icon-active');
 
     // bgImg element
-    // bgImgActive = document.querySelector('.tab-bg-img-active');
-    // let bgImg = ID.replace("icon", "bg-img");
-    // let bgImgID = document.querySelector('#' + bgImg)
-    // console.log(bgImgID)
+    bgImgActive = document.querySelector('.tab-bg-img-active');
+    let bgImg = ID.replace("icon", "bg-img");
+    let bgImgID = document.querySelector('#' + bgImg)
+    console.log(bgImgID)
 
     // makes bgImg element active
-    // if (!bgImgID.classList.contains('tab-bg-img-active')) {
-    //     bgImgID.classList.add('tab-bg-img-active');
-    // }
+    if (!bgImgID.classList.contains('tab-bg-img-active')) {
+        bgImgID.classList.add('tab-bg-img-active');
+    }
 
     // makes all other bgImg elements inactive
-    // bgImgActive.classList.remove('tab-bg-img-active');
+    bgImgActive.classList.remove('tab-bg-img-active');
 
     tabContentActive = document.querySelector('.tab-content-active');
     let tabContent = ID.replace("icon", "content");

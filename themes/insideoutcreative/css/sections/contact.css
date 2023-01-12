@@ -6,8 +6,8 @@
 input,
 textarea {
     width: 100%;
-    border: 1px solid #eaeaea;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .5);
+    /* border: 1px solid #eaeaea;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .5); */
     padding: 9px 25px;
     outline-color: var(--accent);
     margin-bottom: 9px !important;

@@ -22,7 +22,7 @@ $icons = get_sub_field('icons');
 
 echo '<section class="position-relative z-3 pb-5 bg-light" style="">';
 
-// echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100 position-absolute','style'=>'top:0;left:0;object-fit:cover;']);
+echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100 position-absolute','style'=>'top:0;left:0;object-fit:cover;']);
 
 if( have_rows('icons')):
     $iconsCounterImages = 0;
@@ -30,16 +30,17 @@ if( have_rows('icons')):
     $iconsCounterImages++;
     $bgImgIcons = get_sub_field('background_image');
 
-    // if($iconsCounterImages == 1){
-    //     echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons tab-bg-img-active','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
-    // } else {
-    //     echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
-    // }
+    if($iconsCounterImages == 1){
+        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons tab-bg-img-active','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+    } else {
+        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+    }
 
     endwhile;
 endif;
 
-// echo '<div class="position-absolute w-100 h-100 bg-black" style="opacity:.5;top:0;left:0;"></div>';
+echo '<div class="position-absolute w-100 h-100" style="top:0;left:0;background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(211,202,183,1) 50%);"></div>';
 
 echo '<div class="container">';
 
@@ -91,9 +92,9 @@ $iconsCounter++;
 
 if($iconsCounter == 1){
 echo '<div class="w-100 tab-content tab-content-active pt-5" id="tab-content-' . $iconsCounter . '">';
-echo '<div class="col-tab-content row justify-content-between">';
+echo '<div class="col-tab-content row justify-content-center">';
 
-echo '<div class="col-lg-5">';
+echo '<div class="col-lg-9 text-center">';
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
 echo '<div class="pt-2 pb-3" style="font-size:125%;">';
@@ -109,17 +110,17 @@ echo '<a class="btn-main" style="" href="' . esc_url( $button_url ) . '" target=
 endwhile; endif;
 echo '</div>';
 
-echo '<div class="col-lg-6">';
-echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
-echo '</div>';
+// echo '<div class="col-lg-6">';
+// echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
+// echo '</div>';
 
 echo '</div>';
 echo '</div>';
 
 } else {
 echo '<div class="w-100 tab-content  pt-5" style="" id="tab-content-' . $iconsCounter . '">';
-echo '<div class="col-tab-content row justify-content-between">';
-echo '<div class="col-lg-5">';
+echo '<div class="col-tab-content row justify-content-center">';
+echo '<div class="col-lg-9 text-center">';
 
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
@@ -136,9 +137,9 @@ echo '<a class="btn-main" style="" href="' . esc_url( $button_url ) . '" target=
 endwhile; endif;
 echo '</div>';
 
-echo '<div class="col-lg-6">';
-echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
-echo '</div>';
+// echo '<div class="col-lg-6">';
+// echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100']);
+// echo '</div>';
 
 echo '</div>';
 echo '</div>';
