@@ -58,9 +58,9 @@ function riverbendranch_stylesheets_footer() {
 	wp_enqueue_script('lightbox-min-js', get_theme_file_uri('/lightbox/lightbox.min.js'));
 	wp_enqueue_script('lightbox-js', get_theme_file_uri('/lightbox/lightbox.js'));
     // aos
-    // wp_enqueue_script('aos-js', get_theme_file_uri('/aos/aos.js'));
-    // wp_enqueue_script('aos-custom-js', get_theme_file_uri('/aos/aos-custom.js'));
-    // wp_enqueue_style('aos-css', get_theme_file_uri('/aos/aos.css'));
+    wp_enqueue_script('aos-js', get_theme_file_uri('/aos/aos.js'));
+    wp_enqueue_script('aos-custom-js', get_theme_file_uri('/aos/aos-custom.js'));
+    wp_enqueue_style('aos-css', get_theme_file_uri('/aos/aos.css'));
 
     // wp_enqueue_script('jquery-min-js', get_theme_file_uri('/jquery-fittext/jquery.min.js'));
     // wp_enqueue_script('jquery-fittext', get_theme_file_uri('/jquery-fittext/jquery.fittext.js'));
