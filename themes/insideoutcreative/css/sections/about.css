@@ -1,5 +1,5 @@
 /* start of general */
-.full-height:nth-child(odd) {
+/* .full-height:nth-child(odd) {
     background: rgb(31, 61, 124);
     background: linear-gradient(0deg,
             rgba(31, 61, 124, 1) 0%,
@@ -11,7 +11,7 @@
     background: linear-gradient(180deg,
             rgba(31, 61, 124, 1) 0%,
             rgba(122, 155, 73, 1) 100%);
-}
+} */
 
 /* .full-height:nth-child(odd) {
     background: rgb(0, 53, 146);

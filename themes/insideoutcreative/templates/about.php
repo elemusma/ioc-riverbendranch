@@ -12,12 +12,21 @@ $section = sanitize_title_with_dashes($label);
 $content = get_sub_field('content');
 
 
-echo '<section id="section-' . $section . '" class="full-height pt-5 pb-5 position-relative overflow-h section-full d-flex align-items-center" style="min-height:100vh;background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;">';
-echo '<div class="position-absolute w-100 h-100" style="background:#827c7c;mix-blend-mode:multiply;top:0;left:0;"></div>';
+if($bgImg){
+    echo '<section id="section-' . $section . '" class="full-height pt-5 pb-5 position-relative overflow-h section-full d-flex align-items-center text-white ' . get_sub_field('classes') . '" style="min-height:100vh;background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;' . get_sub_field('style') . '">';
+    if(get_sub_field('show_overlay') == 'Yes'){
+        echo '<div class="position-absolute w-100 h-100" style="background:#827c7c;mix-blend-mode:multiply;top:0;left:0;"></div>';
+    }
+} else {
+    echo '<section id="section-' . $section . '" class="full-height pt-5 pb-5 position-relative overflow-h section-full d-flex align-items-center ' . get_sub_field('classes') . '" style="min-height:100vh;' . get_sub_field('style') . '">';
+    // echo '</section>';
+}
+
+
 echo '<div class="container">';
 echo '<div class="row align-items-center">';
 echo '<div class="col-md-9">';
-echo '<div class="text-white" style="margin-bottom:-1rem;">';
+echo '<div class="" style="margin-bottom:-1rem;">';
 echo '<h2 class="text-accent-secondary h1" style="text-shadow:1px 1px white;font-size:50px;">' . $title . '</h2>';
 echo $content;
 echo '</div>';
@@ -34,6 +43,8 @@ echo '</section>';
 endwhile; 
 endif;
 
+
+if(get_sub_field('show_label') == 'Yes'){
 
 if(have_rows('slides')):
 echo '<div class="position-fixed side-navbar" style="top:50%;right:25px;transform:translate(0, -50%);z-index:2;">';
@@ -54,6 +65,27 @@ endwhile;
 echo '</ul>';
 echo '</div>';
 endif;
+
+}
+
+
+if(get_the_content()){
+
+    echo '<section class="pt-5 pb-5">';
+    echo '<div class="container">';
+    echo '<div class="row">';
+    echo '<div class="col-md-12">';
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+    the_content();
+    endwhile; else:
+    echo '<p>Sorry, no posts matched your criteria.</p>';
+    endif;
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+    
+    }
 
 get_footer(); 
 ?>

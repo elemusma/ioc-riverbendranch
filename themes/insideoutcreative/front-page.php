@@ -31,9 +31,9 @@ if( have_rows('icons')):
     $bgImgIcons = get_sub_field('background_image');
 
     if($iconsCounterImages == 1){
-        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons tab-bg-img-active','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-50 h-100 position-absolute bg-img-icons tab-bg-img-active','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
     } else {
-        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-100 h-100 position-absolute bg-img-icons','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
+        echo wp_get_attachment_image($bgImgIcons['id'],'full','',['class'=>'w-50 h-100 position-absolute bg-img-icons','style'=>'top:0;left:0;object-fit:cover;','id'=>'tab-bg-img-' . $iconsCounterImages . '']);
     }
 
     endwhile;
@@ -92,9 +92,9 @@ $iconsCounter++;
 
 if($iconsCounter == 1){
 echo '<div class="w-100 tab-content tab-content-active pt-5" id="tab-content-' . $iconsCounter . '">';
-echo '<div class="col-tab-content row justify-content-center">';
+echo '<div class="col-tab-content row justify-content-end">';
 
-echo '<div class="col-lg-9 text-center">';
+echo '<div class="col-lg-6 text-center">';
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
 echo '<div class="pt-2 pb-3" style="font-size:125%;">';
@@ -119,8 +119,8 @@ echo '</div>';
 
 } else {
 echo '<div class="w-100 tab-content  pt-5" style="" id="tab-content-' . $iconsCounter . '">';
-echo '<div class="col-tab-content row justify-content-center">';
-echo '<div class="col-lg-9 text-center">';
+echo '<div class="col-tab-content row justify-content-end">';
+echo '<div class="col-lg-6 text-center">';
 
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
 
@@ -466,27 +466,27 @@ echo '</section>';
 
 // start of contact section
 if(have_rows('contact_section')): while(have_rows('contact_section')): the_row();
-echo '<section class="pt-5 pb-5 bg-accent-secondary position-relative z-1" style="">';
-echo '<div class="container">';
-echo '<div class="row">';
-echo '<div class="col-12 text-center text-white">';
-echo get_sub_field('content_top');
-echo '</div>';
-echo '</div>';
-echo '</div>';
+// echo '<section class="pt-5 pb-5 bg-accent-secondary position-relative z-1" style="">';
+// echo '<div class="container">';
+// echo '<div class="row">';
+// echo '<div class="col-12 text-center text-white">';
+// echo get_sub_field('content_top');
+// echo '</div>';
+// echo '</div>';
+// echo '</div>';
 
-echo '</section>';
+// echo '</section>';
 
 echo '<section class="pt-5 pb-5 position-relative z-1" style="">';
 echo '<div class="position-absolute w-100 bg-accent-quaternary" style="top:50%;left:0;height:70%;transform:translate(0,-50%);"></div>';
 echo '<div class="container">';
 echo '<div class="row justify-content-center">';
-echo '<div class="col-md-6 text-center">';
-echo '<div class="position-relative pt-5 pr-md-5 pl-md-5 pb-5 pl-3 pr-4 h-100" style="background:#c2c2c2;border:4px solid white;box-shadow:inset 0px 0px 5px rgba(0,0,0,.5);">';
-echo get_sub_field('content_bottom');
-echo '</div>';
-echo '</div>';
-echo '<div class="col-md-6 text-center">';
+// echo '<div class="col-md-6 text-center">';
+// echo '<div class="position-relative pt-5 pr-md-5 pl-md-5 pb-5 pl-3 pr-4 h-100" style="background:#c2c2c2;border:4px solid white;box-shadow:inset 0px 0px 5px rgba(0,0,0,.5);">';
+// echo get_sub_field('content_bottom');
+// echo '</div>';
+// echo '</div>';
+echo '<div class="col-12">';
 echo '<div class="position-relative pt-5 pr-md-5 pl-md-5 pl-3 pr-4 h-100" style="background:#c2c2c2;border:4px solid white;box-shadow:inset 0px 0px 5px rgba(0,0,0,.5);">';
 echo get_sub_field('content_right');
 echo '</div>';

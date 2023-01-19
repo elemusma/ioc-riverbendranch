@@ -210,6 +210,10 @@ hr.text-white {
   background: rgba(0, 0, 0, 0.35);
 }
 
+.logged-in .secondary-nav {
+  margin-top: 32px;
+}
+
 /* content */
 .alignleft {
   float: left;
