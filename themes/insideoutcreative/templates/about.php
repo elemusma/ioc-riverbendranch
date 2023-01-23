@@ -44,7 +44,12 @@ endwhile;
 endif;
 
 
-if(get_sub_field('show_label') == 'Yes'){
+$showLabel = get_field('show_label');
+
+// echo $showLabel;
+// echo 'testing';
+
+if($showLabel == 'Yes'){
 
 if(have_rows('slides')):
 echo '<div class="position-fixed side-navbar" style="top:50%;right:25px;transform:translate(0, -50%);z-index:2;">';
