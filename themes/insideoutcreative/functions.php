@@ -45,6 +45,7 @@ add_action('wp_enqueue_scripts', 'riverbendranch_stylesheets');
 // for footer
 function riverbendranch_stylesheets_footer() {
 	// wp_enqueue_style('style-footer', get_theme_file_uri('/css/style-footer.css'));
+	if(!is_page(55)){
 	// owl carousel
 	wp_enqueue_style('owl.carousel.min', get_theme_file_uri('/owl-carousel/owl.carousel.min.css'));
 	wp_enqueue_style('owl.theme.default', get_theme_file_uri('/owl-carousel/owl.theme.default.min.css'));
@@ -52,15 +53,16 @@ function riverbendranch_stylesheets_footer() {
 	// wp_enqueue_script('font-awesome', '//use.fontawesome.com/fff80caa08.js');
 
 	// owl carousel
-	wp_enqueue_script('jquery-min', get_theme_file_uri('/owl-carousel/jquery.min.js'));
-	wp_enqueue_script('owl-carousel', get_theme_file_uri('/owl-carousel/owl.carousel.min.js'));
-	wp_enqueue_script('owl-carousel-custom', get_theme_file_uri('/owl-carousel/owl-carousels.js'));
-	wp_enqueue_script('lightbox-min-js', get_theme_file_uri('/lightbox/lightbox.min.js'));
-	wp_enqueue_script('lightbox-js', get_theme_file_uri('/lightbox/lightbox.js'));
-    // aos
-    wp_enqueue_script('aos-js', get_theme_file_uri('/aos/aos.js'));
-    wp_enqueue_script('aos-custom-js', get_theme_file_uri('/aos/aos-custom.js'));
-    wp_enqueue_style('aos-css', get_theme_file_uri('/aos/aos.css'));
+		wp_enqueue_script('jquery-min', get_theme_file_uri('/owl-carousel/jquery.min.js'));
+		wp_enqueue_script('owl-carousel', get_theme_file_uri('/owl-carousel/owl.carousel.min.js'));
+		wp_enqueue_script('owl-carousel-custom', get_theme_file_uri('/owl-carousel/owl-carousels.js'));
+		wp_enqueue_script('lightbox-min-js', get_theme_file_uri('/lightbox/lightbox.min.js'));
+		wp_enqueue_script('lightbox-js', get_theme_file_uri('/lightbox/lightbox.js'));
+		// aos
+		wp_enqueue_script('aos-js', get_theme_file_uri('/aos/aos.js'));
+		wp_enqueue_script('aos-custom-js', get_theme_file_uri('/aos/aos-custom.js'));
+		wp_enqueue_style('aos-css', get_theme_file_uri('/aos/aos.css'));
+	}
 
     // wp_enqueue_script('jquery-min-js', get_theme_file_uri('/jquery-fittext/jquery.min.js'));
     // wp_enqueue_script('jquery-fittext', get_theme_file_uri('/jquery-fittext/jquery.fittext.js'));
