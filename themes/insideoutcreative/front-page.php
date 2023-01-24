@@ -343,9 +343,11 @@ $imageMobile = get_sub_field('image_mobile');
 $icon = get_sub_field('icon');
 $innerContent = get_sub_field('inner_content');
 $link = get_sub_field('link');
-$link_url = $link['url'];
-$link_title = $link['title'];
-$link_target = $link['target'] ? $link['target'] : '_self';
+if($link){
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+}
 
 
 echo '<div class="col-lg col-md-6 text-center w-100 overflow-h position-relative z-2 col-full-background d-flex align-items-end justify-content-center" style="padding-top:200px;padding-bottom:0px;min-height:84vh;" id="col-' . $ID . '">';
@@ -380,7 +382,11 @@ echo '<div class="position-absolute w-100 h-100 col-full-background-borders" sty
 
 echo '<div class="position-relative inner-content-outer" style="transition:all .25s ease-in-out;">';
 
-echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="text-decoration:none;">';
+if($link){
+    echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="text-decoration:none;">';
+} else {
+    echo '<div>';
+}
 
 echo '<div class="image-title">';
 echo '<div class="d-inline-block" style="">';
@@ -394,7 +400,11 @@ echo '<div class="pl-3 pr-3 text-white inner-content">';
 echo $innerContent;
 echo '</div>';
 
-echo '</a>';
+if($link){
+    echo '</a>';
+} else {
+    echo '</div>';
+}
 
 echo '</div>';
 echo '</div>';
