@@ -120,7 +120,7 @@ echo '<a class="btn-main" style="" href="' . esc_url( $button_url ) . '" target=
 endwhile; endif;
 
 if($bgImg){
-    echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-auto mt-4','style'=>'','id'=>'']);
+    echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-auto mt-4 d-md-none d-block','style'=>'','id'=>'']);
 }
 
 echo '</div>';
