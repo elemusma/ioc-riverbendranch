@@ -39,9 +39,9 @@ echo '<div class="col-lg-2 col-md-4 col-6">';
     echo '<div class="col-md-4 col-6 desktop-hidden">';
 echo '<a id="navToggle" class="nav-toggle">';
 echo '<div>';
-echo '<div class="line-1 bg-white"></div>';
-echo '<div class="line-2 bg-white"></div>';
-echo '<div class="line-3 bg-white"></div>';
+echo '<div class="line-1 bg-accent-quaternary"></div>';
+echo '<div class="line-2 bg-accent-quaternary"></div>';
+echo '<div class="line-3 bg-accent-quaternary"></div>';
 echo '</div>';
 echo '</a>';
 echo '</div>';
@@ -95,7 +95,7 @@ if(is_front_page()):
     //     } else {
     //     echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
     //     }
-    echo '<video playsinline autoplay muted class="w-100 h-100 position-absolute" style="object-fit:cover;pointer-events:none;" src="' . home_url() . '/wp-content/themes/insideoutcreative/videos/River-Bend-Ranch-Web-Banner.mp4" id="headerVideo"></video>';
+    echo '<video playsinline autoplay muted class="w-100 h-100 position-absolute" style="object-fit:cover;pointer-events:none;" src="' . home_url() . '/wp-content/themes/insideoutcreative/videos/Web Banner-Final.mp4" id="headerVideo"></video>';
 
 echo '<section class="hero position-relative z-2 sd">';
 
@@ -127,29 +127,35 @@ endif;
 
 
 
-?>
 
-<div id="navMenuOverlay" class="position-fixed" style="z-index:4;"></div>
-<div class="col-9 nav-items bg-black desktop-hidden" id="navItems" style="">
-<div class="pt-5 pb-5">
-<div class="close-menu">
-<div>
-<span id="navMenuClose" class="close h1 text-white">X</span>
-</div>
-</div>
-<a href="<?php echo home_url(); ?>">
-<?php 
+
+echo '<div id="navMenuOverlay" class="position-fixed" style="z-index:12;"></div>';
+echo '<div class="col-9 nav-items bg-accent desktop-hidden" id="navItems" style="z-index:13;">';
+echo '<div class="pt-5 pb-5">';
+echo '<div class="close-menu">';
+echo '<div>';
+echo '<span id="navMenuClose" class="close h1 text-white">X</span>';
+echo '</div>';
+echo '</div>';
+echo '<a href="' . home_url() . '">';
+
 $logo = get_field('logo','options'); 
 if($logo){
 echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:125px;']);
 }
-?>
-</a>
-</div>
-<?php 
+
+echo '</a>';
+echo '</div>';
+
 wp_nav_menu(array(
 'menu' => 'primary',
 'menu_class'=>'menu list-unstyled mb-0'
 ));
+
+echo '<div class="pt-5 text-white">';
+the_field('footer_message','options');
+echo '</div>';
+
+echo '</div>';
+
 ?>
-</div>

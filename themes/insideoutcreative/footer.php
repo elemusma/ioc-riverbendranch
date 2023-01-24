@@ -30,7 +30,7 @@ echo '</div>';
 
 echo '<div class="col-lg-6 text-white">';
 
-echo '<div style="" class="">';
+echo '<div style="" class="text-center">';
 the_field('footer_message','options');
 
 // echo '<div class="d-flex justify-content-center align-items-center flex-wrap">';

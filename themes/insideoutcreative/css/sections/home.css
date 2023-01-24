@@ -1,3 +1,10 @@
+/* start of general */
+/* section {
+  overflow: hidden;
+} */
+
+/* end of general */
+
 /* start of header */
 .position-absolute .owl-stage-outer,
 .position-absolute .owl-stage,
@@ -5,9 +12,27 @@
   height: 100%;
 }
 
+@media only screen and (max-width:991px) {
+  header {
+    min-height: 40vh !important;
+  }
+}
+
 @media only screen and (max-width:767px) {
+  header {
+    min-height: 25vh !important;
+  }
+
+  .hero-content-inner {
+    padding: 50px 0px 150px !important;
+  }
+
   h1.aspira-black {
     font-size: 55px !important;
+  }
+
+  .col-intro-icon-title {
+    font-size: 13px;
   }
 }
 
@@ -125,15 +150,25 @@
     margin-top: -50px !important;
   }
 
-  .col-intro-icon:nth-child(3),
   .col-intro-icon:nth-child(4),
   .col-intro-icon:nth-child(5) {
     margin-top: -5px !important;
   }
 
+  .tab-content-inner {
+    font-size: 90% !important;
+  }
+
   /* .row-intro-icon {
     margin-top: -50px;
   } */
+}
+
+@media only screen and (max-width:767px) {
+  .tab-icon img {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }
 
 /* end of intro */
