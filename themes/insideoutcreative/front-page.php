@@ -102,7 +102,7 @@ if($iconsCounter == 1){
     echo '<div class="w-100 tab-content pt-5" id="tab-content-' . $iconsCounter . '">';
 }
 echo '<div class="container">';
-echo '<div class="col-tab-content row justify-content-center">';
+echo '<div class="col-tab-content row justify-content-end">';
 
 echo '<div class="col-lg-6 text-center">';
 echo '<h2 class="proxima-bold">' . $title . '</h2>';
