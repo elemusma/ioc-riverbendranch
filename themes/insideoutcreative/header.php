@@ -95,7 +95,7 @@ if(is_front_page()):
     //     } else {
     //     echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
     //     }
-    echo '<video playsinline autoplay muted class="w-100 h-100 position-absolute" style="object-fit:cover;pointer-events:none;" src="' . home_url() . '/wp-content/themes/insideoutcreative/videos/Web Banner-Final.mp4" id="headerVideo"></video>';
+    echo '<video playsinline autoplay muted loop class="w-100 h-100 position-absolute" style="object-fit:cover;pointer-events:none;" src="' . home_url() . '/wp-content/themes/insideoutcreative/videos/Web Banner-Final.mp4" id="headerVideo"></video>';
 
 echo '<section class="hero position-relative z-2 sd">';
 
