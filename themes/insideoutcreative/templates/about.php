@@ -23,7 +23,7 @@ if($bgImg){
 }
 
 if(!$content){
-    echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'d-lg-none d-block w-100 h-auto']);
+    echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'d-lg-none d-block h-auto','style'=>'width:100vw;']);
 }
 
 
