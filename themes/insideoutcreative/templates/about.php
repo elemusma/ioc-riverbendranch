@@ -22,6 +22,10 @@ if($bgImg){
     // echo '</section>';
 }
 
+if(!$content){
+    echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'d-lg-none d-block w-100 h-auto']);
+}
+
 
 echo '<div class="container">';
 echo '<div class="row align-items-center">';
