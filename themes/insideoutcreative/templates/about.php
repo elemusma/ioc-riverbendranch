@@ -13,7 +13,7 @@ $content = get_sub_field('content');
 
 
 if($bgImg){
-    echo '<section id="section-' . $section . '" class="full-height pt-5 pb-5 position-relative overflow-h section-full d-flex align-items-center text-white bg-attachment ' . get_sub_field('classes') . '" style="min-height:100vh;background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;background-attachment:fixed;' . get_sub_field('style') . '">';
+    echo '<section id="section-' . $section . '" class="full-height pt-5 pb-5 position-relative overflow-h section-full d-flex align-items-center text-white bg-attachment ' . get_sub_field('classes') . '" style="min-height:100vh;background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;' . get_sub_field('style') . '">';
     if(get_sub_field('show_overlay') == 'Yes'){
         echo '<div class="position-absolute w-100 h-100" style="background:#827c7c;mix-blend-mode:multiply;top:0;left:0;"></div>';
     }
