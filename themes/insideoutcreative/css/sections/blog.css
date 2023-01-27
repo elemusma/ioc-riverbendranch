@@ -29,7 +29,7 @@ textarea#comment {
 
 input#submit,
 input#searchsubmit {
-    background: var(--accent-primary);
+    background: var(--accent-secondary);
     border: none;
     padding: 10px 30px;
     color: white;
@@ -39,7 +39,7 @@ input#searchsubmit {
 }
 
 input#searchsubmit:hover {
-    background: var(--accent-secondary);
+    background: var(--accent-primary);
 }
 
 /* pagination */
@@ -51,8 +51,8 @@ span.page-numbers.current {
 }
 
 a.page-numbers {
-    background: #029d95;
-    border: 2px solid #029d95;
+    background: var(--accent-primary);
+    border: 2px solid var(--accent-primary);
     padding: 10px 20px;
     color: white;
     margin: 0 0 10px !important;
